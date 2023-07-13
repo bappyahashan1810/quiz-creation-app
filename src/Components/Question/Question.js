@@ -7,8 +7,9 @@ const Question = ({ question }) => {
 
 
 
+
     return (
-        <QuestionIdContex.Provider value={id}>
+        <QuestionIdContex.Provider value={question}>
             <div>
                 <ul>
                     <div className='bg-teal-300	 mt-5 border-1 border-sky-500 p-2 rounded-lg'>
@@ -16,7 +17,7 @@ const Question = ({ question }) => {
                         <div className='border-1 border-red-600 grid grid-cols-2 gap-3'>
                             {
                                 options.map(option => <Option
-                                    key={id}
+                                    // key={id}
                                     option={option}
                                 ></Option>)
                             }
