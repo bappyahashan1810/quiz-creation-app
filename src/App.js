@@ -3,7 +3,7 @@ import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Main from './Layout/main';
 import Home from './Components/Home/Home';
-import Quiz from './Components/quizes/quizes';
+import Quiz from './Components/quizes/Quiz';
 import Blog from './Components/Blog/Blog';
 
 function App() {
@@ -19,7 +19,8 @@ function App() {
           element: <Home></Home>
         },
         {
-          path: '/quiz',
+          path: '/quiz/:quizid',
+          loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizid}`),
           element: <Quiz></Quiz>
         },
         {

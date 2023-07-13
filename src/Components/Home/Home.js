@@ -6,7 +6,7 @@ import QuizTopic from '../QuizTopic/QuizTopic';
 const Home = () => {
     const loadQuizTopics = useLoaderData();
     const quizTopics = loadQuizTopics.data;
-    console.log(quizTopics);
+
     return (
         <div className='mt-5'>
             <div className='border-slate-500 border-2	h-52 image-container'>
